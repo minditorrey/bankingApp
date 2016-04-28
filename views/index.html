@@ -32,7 +32,7 @@
 				<div class="col-md-4">
 					<div class="form-group">
 						<label>Debit</label>
-						<input type="text" class="form-control animated animate-bounce" placeholder="$0.00" ng-model='itemToEdit.debit'>
+						<input type="text" class="form-control" placeholder="$0.00" ng-model='itemToEdit.debit'>
 					</div>
 					<div class="form-group">
 						<label>Memo</label>
@@ -73,8 +73,8 @@
 				<tr class="ng-enter-stagger" ng-repeat='item in items | filter: searchFilter | orderBy:sortOrder track by $index'>
 					<td>{{item.date}}</td>
 					<td>{{item.description}}</td>
-					<td>{{item.debit}}</td>
-					<td>{{item.credit}}</td>
+					<td>{{item.debit | currency}}</td>
+					<td>{{item.credit | currency}}</td>
 					<td>
 						<button ng-click="editItem(item)" type="button" class="btn btn-primary btn-sm" >
 						  <span class="glyphicon glyphicon-edit"></span>
@@ -100,9 +100,9 @@
 			</thead>
 			<tbody >
 				<tr>
-					<td ng-model='totalDebits'>Total Debits: $ {{getTotalDebits()}}</td>
-					<td ng-model='totalCredits'>Total Credits: $ {{getTotalCredits()}}</td>
-					<td>Balance: $ {{getBalance()}}</td>
+					<td ng-model='totalDebits'>Total Debits:  {{getTotalDebits() | currency}}</td>
+					<td ng-model='totalCredits'>Total Credits:  {{getTotalCredits() | currency}}</td>
+					<td>Balance: {{getBalance() | currency}}</td>
 				</tr>
 			</tbody>
 		</table>
