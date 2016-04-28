@@ -5,7 +5,7 @@ var app = angular.module('myApp', []);
 
 
 app.controller('mainController', function($scope) {
-	$scope.items = [{'date': '01/01/2016', 'description': 'rainbows', 'credit': '10'}, {'date': '01/01/2016', 'description': 'electric bill', 'debit': '-150'}];
+	$scope.items = [{'date': '01/01/2016', 'description': 'fluffy rainbows', 'credit': '10'}, {'date': '01/01/2016', 'description': 'electric bill', 'debit': '-150'}];
 
 	$scope.addItem = () => {
 			$scope.items.push($scope.itemToEdit);

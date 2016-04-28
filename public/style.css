@@ -20,6 +20,11 @@ h1 {
 	color: white;
 }
 
+h2 {
+	color: #fca235;
+	font-weight: bold;
+}
+
 .add {
 	margin-top: 1%;
 	margin-bottom: 3%;
@@ -47,7 +52,8 @@ h1 {
 	padding-right: 25%;
 	width: 130%;
 	color: white;
-	font-size: 18px;	
+	font-size: 18px;
+	color: #fca235;;	
 }
 
 #bottom {
@@ -58,4 +64,5 @@ h1 {
 	padding-left: 15%;
 	padding-right: 25%;
 	width: 132%;
+	margin-bottom: -5%;
 }
